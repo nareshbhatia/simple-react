@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 export interface HandleQueryProps {
     loading: boolean;
@@ -18,5 +18,5 @@ export const HandleQuery: React.FC<HandleQueryProps> = ({
         return <div>{error.message}</div>;
     }
 
-    return children;
+    return children as ReactElement<any>;
 };
